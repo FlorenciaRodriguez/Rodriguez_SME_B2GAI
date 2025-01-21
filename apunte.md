@@ -40,29 +40,31 @@ La IAG utiliza algoritmos de las siguientes categorías del aprendizaje automát
 
 El flujo de trabajo general para poner a trabajar la IAG es el siguiente.
 
-**Establecer el objetivo:** es vital entender el problema a resolver y cuáles son los objetivos dado las características de la empresa, así como de la data que tendremos a disposición. 
+1. **Establecer el objetivo:** es vital entender el problema a resolver y cuáles son los objetivos dado las características de la empresa, así como de la data que tendremos a disposición. 
 
-**Recopilación de datos:** se recopila un gran conjunto de datos que contiene ejemplos del tipo de contenido que se va a generar. Por ejemplo, un conjunto de datos de imágenes para generar imágenes realistas, o un _dataset_ de texto para generar oraciones coherentes. Existen diversas fuentes, pero las más comunes son: _Data First Party_ (datos propios de la empresa (ERP[^4]:,CRM[^5]:, etc.); _Data Second Party_ (datos que comparte una organización con sus aliados estratégicos) y _Data Third Party_ (datos de terceros que se obtienen ya sea de forma gratuita o incurriendo en algún tipo de costo asociado).
+2. **Recopilación de datos:** se recopila un gran conjunto de datos que contiene ejemplos del tipo de contenido que se va a generar. Por ejemplo, un conjunto de datos de imágenes para generar imágenes realistas, o un _dataset_ de texto para generar oraciones coherentes. Existen diversas fuentes, pero las más comunes son: _Data First Party_ (datos propios de la empresa (ERP[^4]:,CRM[^5]:, etc.); _Data Second Party_ (datos que comparte una organización con sus aliados estratégicos) y _Data Third Party_ (datos de terceros que se obtienen ya sea de forma gratuita o incurriendo en algún tipo de costo asociado).
 
 [^4]: _Enterprise Resource Planning_
 [^5]: _Customer Relationship Management_
 
 
-**Preparación de datos:** normalmente se conoce como la limpieza de los datos o el formateo del dato. El objetivo de esta etapa es manipular y convertir la data en formas que produzcan mejores resultados. Algunos ejemplos, son eliminar o inferir datos perdidos, categorizar los valores de las variables, normalizar los valores numéricos o escalarlos para que puedan ser comparables.
+3. **Preparación de datos:** normalmente se conoce como la limpieza de los datos o el formateo del dato. El objetivo de esta etapa es manipular y convertir la data en formas que produzcan mejores resultados. Algunos ejemplos, son eliminar o inferir datos perdidos, categorizar los valores de las variables, normalizar los valores numéricos o escalarlos para que puedan ser comparables.
 
-**Creación del modelo:** el modelo se forma con el dataset para aprender los patrones y estructuras subyacentes en los datos. Para ello se divide los datos en dos conjuntos: entrenamiento y _test_.
+4. **Creación del modelo:** el modelo se forma con el dataset para aprender los patrones y estructuras subyacentes en los datos. Para ello se divide los datos en dos conjuntos: entrenamiento y _test_.
 
-**Entrenamiento del modelo:** el proceso de entrenamiento consiste en proporcionar al modelo datos de entrenamiento de los cuales pueda aprender.
+5. **Entrenamiento del modelo:** el proceso de entrenamiento consiste en proporcionar al modelo datos de entrenamiento de los cuales pueda aprender.
 
-**Validar modelo:** se realizará con la _data_ de validación y se ejecuta el algoritmo y se evaluarán los resultados obtenidos.  En el caso de que los resultados no sean satisfactorios, se vuelve a la etapa de creación hasta que nuestro modelo se ajuste bien a las dos particiones (_data_ de entrenamiento y _data_ de validación).
+6. **Validar modelo:** se realizará con la _data_ de validación y se ejecuta el algoritmo y se evaluarán los resultados obtenidos.  En el caso de que los resultados no sean satisfactorios, se vuelve a la etapa de creación hasta que nuestro modelo se ajuste bien a las dos particiones (_data_ de entrenamiento y _data_ de validación).
 
-**Perfeccionamiento:** el contenido generado es una síntesis de lo que el modelo ha aprendido de los datos de formación. Dependiendo de la tarea y la aplicación, el contenido generado puede someterse a un mayor refinamiento o _post_-procesamiento para mejorar su calidad o para cumplir con requisitos específicos.
+7. **Perfeccionamiento:** el contenido generado es una síntesis de lo que el modelo ha aprendido de los datos de formación. Dependiendo de la tarea y la aplicación, el contenido generado puede someterse a un mayor refinamiento o _post_-procesamiento para mejorar su calidad o para cumplir con requisitos específicos.
 
-**Implementación en producción.** Generalmente, se despliega en la nube a través de los 3 vendedores más conocidos que existen actualmente: AWS[^6]:, Azure[^7] y GCP[^8]. 
+8. **Implementación en producción.** Generalmente, se despliega en la nube a través de los 3 vendedores más conocidos que existen actualmente: AWS[^6]:, Azure[^7] y GCP[^8]. 
 
 [^6]: https://aws.amazon.com/
 [^7]: https://azure.microsoft.com/
 [^8]: https://cloud.google.com/
+
+![image](https://github.com/user-attachments/assets/92daee1b-7d53-4d68-ba3a-97398d490859)
 
 ## IA en las organizaciones
 
@@ -173,11 +175,11 @@ Los desafíos en la implementación de IAG abarcan una serie de preocupaciones t
 
 **Datos:** los modelos de IAG requieren una cantidad significativa de datos relevantes de alta calidad para entrenarse de manera eficaz. Adquirir dichos datos puede ser un desafío, particularmente en dominios donde son escasos, confidenciales o protegidos, como en finanzas o cuidado de la salud. Además, garantizar la diversidad y representatividad de los datos para evitar sesgos en el resultado generado puede ser una tarea compleja. 
 
-**Complejidad del entrenamiento:** entrenar modelos de IAG requiere un uso intensivo de recursos de computación, consume mucho tiempo, y es costoso. Requiere cantidades significativas de recursos y expertise, lo cual puede ser una barrera para las organizaciones más pequeñas o nuevas en IA. El entrenamiento distribuido, donde el proceso se divide entre múltiples máquinas o GPU, puede ayudar a acelerarlo. Además, la transferencia del aprendizaje, una técnica donde un modelo pre entrenado se ajusta a una tarea específica, puede reducir la complejidad y los requisitos de recursos del entrenamiento.
+**Complejidad del entrenamiento:** entrenar modelos de IAG requiere un uso intensivo de recursos de computación, consume mucho tiempo, y es costoso. Requiere cantidades significativas de recursos y expertise, lo cual puede ser una barrera para las organizaciones más pequeñas o nuevas en IA. El entrenamiento distribuido, donde el proceso se divide entre múltiples máquinas o GPU (unidad de procesamiento gráfico), puede ayudar a acelerarlo. Además, la transferencia del aprendizaje, una técnica donde un modelo pre entrenado se ajusta a una tarea específica, puede reducir la complejidad y los requisitos de recursos del entrenamiento.
 
 **Controlar el resultado:** controlar los resultados de la IAG puede ser un desafío. Los modelos generativos pueden generar contenido no deseable o irrelevante. Por ejemplo, los modelos de IA podrían crear un texto ficticio, incorrecto, ofensivo o sesgado. Mejorar el entrenamiento del modelo brindando datos más diversos y representativos puede ayudar a resolver este problema. Además, implementar mecanismos para filtrar o verificar el contenido generado puede garantizar su relevancia y adecuación.
 
-**Preocupaciones éticas:** la IAG plantea varias preocupaciones éticas, especialmente en términos de la autenticidad e integridad del contenido generado. Los deep fakes, creados por las GAN, pueden ser mal utilizados para difundir información errónea o cometer actividades fraudulentas. Se pueden emplear modelos de texto generativos para crear artículos de noticias engañosos o reseñas falsas. Es crucial establecer pautas éticas sólidas para el uso de la IA generativa. Tecnologías como la marca de agua digital o el blockchain pueden ayudar a hacer seguimiento y autenticar el contenido generado por IA. Además, desarrollar la alfabetización en IA entre el público puede mitigar los riesgos de desinformación y fraude.
+**Preocupaciones éticas:** la IAG plantea varias preocupaciones éticas, especialmente en términos de la autenticidad e integridad del contenido generado. Los deep fakes, creados por las GAN (redes generativas antagónicas), pueden ser mal utilizados para difundir información errónea o cometer actividades fraudulentas. Se pueden emplear modelos de texto generativos para crear artículos de noticias engañosos o reseñas falsas. Es crucial establecer pautas éticas sólidas para el uso de la IA generativa. Tecnologías como la marca de agua digital o el blockchain pueden ayudar a hacer seguimiento y autenticar el contenido generado por IA. Además, desarrollar la alfabetización en IA entre el público puede mitigar los riesgos de desinformación y fraude.
 
 **Obstáculos regulatorios:** faltan directrices reglamentarias claras para el uso de la IA generativa. Dado que la IA continúa evolucionando rápido, las leyes y regulaciones tienen dificultades para mantenerse al día, lo cual lleva a incertidumbres y posibles conflictos legales.
 
