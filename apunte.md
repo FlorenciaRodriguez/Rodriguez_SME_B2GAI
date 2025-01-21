@@ -18,7 +18,11 @@ Los algoritmos de _machine learning_ aprenden datos, identificar patrones y toma
 
 ## Inteligencia artificial generativa
 
-En los últimos años, la inteligencia artificial generativa (IAG) ha ganado gran relevancia gracias al desarrollo de modelos avanzados como Chat GPT, Mid Journey, DALL·E y otros sistemas capaces de crear texto, imágenes, música y código con un nivel de calidad cercano al humano. Estas herramientas han revolucionado sectores como el marketing, la educación, el arte y la programación, facilitando la automatización de tareas creativas y el desarrollo de soluciones innovadoras. La IAG no solo optimiza procesos existentes, sino que también abre nuevas oportunidades de negocio, redefiniendo la forma en que interactuamos con la tecnología y la información.
+En los últimos años, la inteligencia artificial generativa (IAG) ha ganado gran relevancia gracias al desarrollo de modelos avanzados como Chat GPT[^1], Mid Journey[^2], DALL·E[^3] y otros sistemas capaces de crear texto, imágenes, música y código con un nivel de calidad cercano al humano. Estas herramientas han revolucionado sectores como el marketing, la educación, el arte y la programación, facilitando la automatización de tareas creativas y el desarrollo de soluciones innovadoras. La IAG no solo optimiza procesos existentes, sino que también abre nuevas oportunidades de negocio, redefiniendo la forma en que interactuamos con la tecnología y la información.
+
+[^1]: https://chatgpt.com/
+[^2]: https://www.midjourney.com/
+[^3]: https://openai.com/index/dall-e/
 
 En líneas generales, la inteligencia artificial generativa (IAG) se refiere a una rama de la IA que se centra en el desarrollo de sistemas que pueden crear contenido nuevo y original, en lugar de simplemente analizar o procesar información existente. Específicamente tienen capacidad para comprender y crear en el ámbito del lenguaje natural, el código y otras representaciones simbólicas como la música, la fotografía y la ilustración. 
 
@@ -26,11 +30,11 @@ La IAG trabaja sobre los principios del _machine learning_. Sin embargo, a difer
 
 La IAG utiliza algoritmos de las siguientes categorías del aprendizaje automático:
 
-Aprendizaje supervisado: son algoritmos entrenados utilizando ejemplos etiquetados, como una entrada donde se conoce el resultado deseado. El modelo de IAG se puede ajustar con datos específicos para producir un tipo específico de contenido. 
+**Aprendizaje supervisado:** son algoritmos entrenados utilizando ejemplos etiquetados, como una entrada donde se conoce el resultado deseado. El modelo de IAG se puede ajustar con datos específicos para producir un tipo específico de contenido. 
 
-Aprendizaje no supervisado: se utiliza con datos que no tienen etiquetas. Los modelos de IAG se pueden entrenar con datos no etiquetados para generar nuevas muestras similares a la distribución de datos. Esto se hace para mejorar el rendimiento de los modelos no supervisados.
+**Aprendizaje no supervisado:** se utiliza con datos que no tienen etiquetas. Los modelos de IAG se pueden entrenar con datos no etiquetados para generar nuevas muestras similares a la distribución de datos. Esto se hace para mejorar el rendimiento de los modelos no supervisados.
 
-Aprendizaje por refuerzo: se utiliza en escenarios donde el proceso de generación implica una secuencia de decisiones, como generar un diálogo en un agente conversacional o acciones en un juego. El algoritmo descubre a través de ensayo y error qué acciones producen las mayores recompensas.
+**Aprendizaje por refuerzo:** se utiliza en escenarios donde el proceso de generación implica una secuencia de decisiones, como generar un diálogo en un agente conversacional o acciones en un juego. El algoritmo descubre a través de ensayo y error qué acciones producen las mayores recompensas.
 
 ## Flujo de trabajo
 
@@ -38,19 +42,27 @@ El flujo de trabajo general para poner a trabajar la IAG es el siguiente.
 
 **Establecer el objetivo:** es vital entender el problema a resolver y cuáles son los objetivos dado las características de la empresa, así como de la data que tendremos a disposición. 
 
-**Recopilación de datos:** se recopila un gran conjunto de datos que contiene ejemplos del tipo de contenido que se va a generar. Por ejemplo, un conjunto de datos de imágenes para generar imágenes realistas, o un dataset de texto para generar oraciones coherentes. Existen diversas fuentes, pero las más comunes son: Data First Party (datos propios de la empresa (ERP,CRM, etc); Data Second Party (datos que comparte una organización con sus aliados estratégicos) y Data Third Party (datos de terceros que se obtienen ya sea de forma gratuita o incurriendo en algún tipo de costo asociado).
+**Recopilación de datos:** se recopila un gran conjunto de datos que contiene ejemplos del tipo de contenido que se va a generar. Por ejemplo, un conjunto de datos de imágenes para generar imágenes realistas, o un _dataset_ de texto para generar oraciones coherentes. Existen diversas fuentes, pero las más comunes son: _Data First Party_ (datos propios de la empresa (ERP[^4]:,CRM[^5]:, etc.); _Data Second Party_ (datos que comparte una organización con sus aliados estratégicos) y _Data Third Party_ (datos de terceros que se obtienen ya sea de forma gratuita o incurriendo en algún tipo de costo asociado).
+
+[^4]: _Enterprise Resource Planning_
+[^5]: _Customer Relationship Management_
+
 
 **Preparación de datos:** normalmente se conoce como la limpieza de los datos o el formateo del dato. El objetivo de esta etapa es manipular y convertir la data en formas que produzcan mejores resultados. Algunos ejemplos, son eliminar o inferir datos perdidos, categorizar los valores de las variables, normalizar los valores numéricos o escalarlos para que puedan ser comparables.
 
-**Creación del modelo:** el modelo se forma con el dataset para aprender los patrones y estructuras subyacentes en los datos. Para ello se divide los datos en dos conjuntos: entrenamiento y test.
+**Creación del modelo:** el modelo se forma con el dataset para aprender los patrones y estructuras subyacentes en los datos. Para ello se divide los datos en dos conjuntos: entrenamiento y _test_.
 
 **Entrenamiento del modelo:** el proceso de entrenamiento consiste en proporcionar al modelo datos de entrenamiento de los cuales pueda aprender.
 
-**Validar modelo:** se realizará con la _data_ de validación y se ejecuta el algoritmo y se evaluarán los resultados obtenidos.  En el caso de que los resultados no sean satisfactorios, se vuelve a la etapa de creación hasta que nuestro modelo se ajuste bien a las dos particiones (data de entrenamiento y data de validación).
+**Validar modelo:** se realizará con la _data_ de validación y se ejecuta el algoritmo y se evaluarán los resultados obtenidos.  En el caso de que los resultados no sean satisfactorios, se vuelve a la etapa de creación hasta que nuestro modelo se ajuste bien a las dos particiones (_data_ de entrenamiento y _data_ de validación).
 
 **Perfeccionamiento:** el contenido generado es una síntesis de lo que el modelo ha aprendido de los datos de formación. Dependiendo de la tarea y la aplicación, el contenido generado puede someterse a un mayor refinamiento o _post_-procesamiento para mejorar su calidad o para cumplir con requisitos específicos.
 
-**Implementación en producción.** Generalmente, se despliega en la nube a través de los 3 vendedores más conocidos que existen actualmente: AWS, Azure y GCP. 
+**Implementación en producción.** Generalmente, se despliega en la nube a través de los 3 vendedores más conocidos que existen actualmente: AWS[^6]:, Azure[^7] y GCP[^8]. 
+
+[^6]: https://aws.amazon.com/
+[^7]: https://azure.microsoft.com/
+[^8]: https://cloud.google.com/
 
 ## IA en las organizaciones
 
@@ -59,6 +71,11 @@ Uno de los mayores obstáculos para el uso de la IA es encontrar casos de uso ad
 Muchas veces el caso de uso puede resolverse sin utilizar IA. Por ejemplo, en un _chat_ de atención al cliente en línea, una persona podría responder preguntas en lugar de utilizar métodos de IA. En este caso, se deben sopesar las fortalezas y debilidades de las alternativas a corto y largo plazo. Una matriz como la siguiente puede ayudar a clarificar la prioridad de cada caso (Tabla 1).
 
 Tabla 1. Matriz para análisis de impacto de caso de uso
+| <!-- -->      | <!-- -->        | <!-- -->      |
+|:-------------:|:---------------:|:-------------:|
+|                | **Alta inversión** | **Baja inversión** |
+| **Alto impacto** |              |             |
+| **Bajo impacto** |              |             |
 
 
 
@@ -79,6 +96,30 @@ En líneas generales el lienzo de IA consta de diez áreas que afectan la implem
 La estructura del lienzo no es inamovible y los campos se pueden combinar. Lo esencial es que las cuestiones clave se puedan considerar con suficiente precisión.
 
 Tabla 2. Lienzo de IA
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-0lax">Necesidades del negocio</th>
+    <th class="tg-0lax" colspan="2">Partes interesadas</th>
+    <th class="tg-0lax">Éticas y normas</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">Datos</td>
+    <td class="tg-0lax" colspan="2">Conocimientos y habilidades</td>
+    <td class="tg-0lax" rowspan="2">Métricas</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Aprendizaje automático</td>
+    <td class="tg-0lax" colspan="2">Procesos</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" colspan="2">Tecnología e infraestructura</td>
+    <td class="tg-0lax" colspan="2">Costo y retorno de la inversión</td>
+  </tr>
+</tbody>
+</table>
+
 
 **Descripción de la solución y necesidad empresarial**
 
